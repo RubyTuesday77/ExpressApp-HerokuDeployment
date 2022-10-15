@@ -1,6 +1,7 @@
 // DEPENDENCIES:
 const express = require('express')
 const app = express()
+require('dotenv').config()
 
 
 // ROUTES:
@@ -11,6 +12,4 @@ app.get('/', (req, res) => {
 
 
 // LISTEN:
-app.listen(3000, () => {
-    console.log('Greetings from port 3000')
-})
+app.listen(process.env.PORT)
